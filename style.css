@@ -447,23 +447,6 @@ input {
     transform: var(--img-scale);
 }
 
-/* ================== Sponsors================== */
-.sponsor-container {
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    justify-items: center;
-    row-gap: 3.5rem;
-}
-
-.sponsor-img {
-    width: 90px;
-    filter: invert(.7);
-    transition: var(--img-transition);
-}
-
-.sponsor-content:hover .sponsor-img {
-    filter: invert(.3);
-}
-
 /* ================== FOOTER================== */
 .footer-container {
     row-gap: 5rem;
