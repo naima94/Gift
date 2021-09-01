@@ -39,7 +39,7 @@ function scrollHeader(){
 window.addEventListener("scroll", scrollHeader)
 
 
-  /* ================ SCROLL ACTIONS ACTIVE LINK ================ */
+  /* ================ SCROLL ACTIONS ACTIVE LINK ================ 
  const section = document.querySelectorAll("section[id]")
 
 function scrollActive() {
@@ -57,9 +57,9 @@ function scrollActive() {
         }
     })
 }
-        window.addEventListener("scroll", scrollActive)
+        window.addEventListener("scroll", scrollActive)*/
 
-        /* ================ DARK LIGHT THEME ================ */
+        /* ================ DARK LIGHT THEME ================ 
         const themeButton = document.getElementById("theme-button")
         const darkTheme = "dark-theme"
         const iconTheme = "ri-sun-line"
@@ -88,7 +88,7 @@ function scrollActive() {
             // We save the theme and the current icon thet the user chose
             localStorage.setItem("selected-theme", getCurrentTheme())
             localStorage.setItem("selected-icon", getCurrentIcon())
-        })
+        })*/
 
 /* ===========  SSCROLL REVEAL ANIMATION  =========== */
 const sr = ScrollReveal({
