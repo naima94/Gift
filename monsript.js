@@ -38,88 +38,25 @@ function scrollHeader(){
 }
 window.addEventListener("scroll", scrollHeader)
 
-/* ================ SWIPER DISCOVER ================ */
-var swiper = new Swiper(".discover-container", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    loop: true,
-    spaceBetween: 32,
-    coverflowEffect: {
-      rotate: 0,
-      /*stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,*/
-    },
-    /*pagination: {
-      el: ".swiper-pagination",
-    },*/
-  })
 
-  /* ================ VIDEO ================ */
-  const videoFile = document.getElementById("video-file"),
-        videoButton = document.getElementById("video-button"),
-        videoIcon = document.getElementById("video-icon")
+  /* ================ SCROLL ACTIONS ACTIVE LINK ================ */
+ const section = document.querySelectorAll("section[id]")
 
-        function playPause() {
-            if(videoFile.paused) {
-                // Play video
-                videoFile.play() 
+function scrollActive() {
+     const scrollY =window.pageYOffset
 
-                // We change the icon
-                videoIcon.classList.add("ri-pause-fill")
-                videoIcon.classList.remove("ri-play-fill")
-            } else {
-                // Pause video
-                videoFile.pause()
+     section.forEach(current => {
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50
+        sectionId = current.getAttribute("id")
 
-                // We change the icon
-                videoIcon.classList.remove("ri-pause-fill")
-                videoIcon.classList.add("ri-play-fill")
-            }
-        }
-
-        videoButton.addEventListener("click", playPause)
-
-        function finalVideo() {
-            // Video ends, icon change
-            videoIcon.classList.remove("ri-pause-fill")
-            videoIcon.classList.add("ri-play-fill")
-        }
-
-        // Ended, when the video end
-        videoFile.addEventListener("ended", finalVideo)
-
-
-        /* ================ SHOW SCROLL ================ */
-        function scrollUp() {
-            const scrollUp = document.getElementById("scroll-up");
-            // When the scroll is higher than 200 viewport height, add the show-scroll class to the tag with the scrollUp 
-            if(this.scrollY >= 200) scrollUp.classList.add("show-scroll"); 
-            else scrollUp.classList.remove("show-scroll")
-        }
-        window.addEventListener("scroll", scrollUp)
-
-        /* ================ SCROLL ACTIONS ACTIVE LINK ================ */
-        const section = document.querySelectorAll("section[id]")
-
-        function scrollActive() {
-            const scrollY =window.pageYOffset
-
-            section.forEach(current => {
-                const sectionHeight = current.offsetHeight
-                const sectionTop = current.offsetTop - 50
-                sectionId = current.getAttribute("id")
-
-                if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                     document.querySelector(".nav-menu a[href*="+ sectionId +"]").classList.add("active-link")
                 } else {
                     document.querySelector(".nav-menu a[href*="+ sectionId +"]").classList.remove("active-link")
-                }
-            })
         }
+    })
+}
         window.addEventListener("scroll", scrollActive)
 
         /* ================ DARK LIGHT THEME ================ */
