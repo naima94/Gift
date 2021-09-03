@@ -15,6 +15,7 @@ const showMenu  = (toggleId, navId) => {
 showMenu("nav-toggle", "nav-menu")
 
 /* =============== REMOVE MENU MOBILE =============== */
+
 const navLink = document.querySelectorAll(".nav-link")
 
 function linkAction() {
@@ -23,3 +24,24 @@ function linkAction() {
     navMenu.classList.remove("show-menu")
 }
 navLink.forEach(n => n.addEventListener("click", linkAction))
+
+/* =============== SCROLL SECTION ACTIVE LINK =============== */
+
+const section = document.querySelectorAll("section[id]")
+
+function scrollActive() {
+    const scrollY =window.pageYOffset
+
+    section.forEach(current => {
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50
+        sectionId = current.getAttribute("id")
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector(".nav-menu a[href*="+ sectionId +"]").classList.add("active-link")
+        } else {
+            document.querySelector(".nav-menu a[href*="+ sectionId +"]").classList.remove("active-link")
+        }
+    })
+}
+window.addEventListener("scroll", scrollActive)
