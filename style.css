@@ -59,6 +59,8 @@
     }
 }
 
+/* ========== Variables Dark Theme ========== */
+
 /* ================== BASE ================== */
 *, ::before, ::after {
     box-sizing: border-box;
@@ -125,217 +127,12 @@ input {
     padding: 4rem 0 2rem;
 }
 
-.section-title {
+.section-title,
+.section-title-center {
     font-size: var(--h2-font-size);
     color: var(--title-color);
     text-align: center;
     margin-bottom: var(--mb-3);
-}
-
-/*.container {
-    max-width: 968px;
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
-}
-
-.grid {
-    display: grid;
-    gap: 1.5rem;
-}
-
-/* ================== HEADER ================== */
-.header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: var(--z-fixed);
-    background-color: transparent;
-}
-
-.bd-container {
-    max-width: 968px;
-    width: calc(100% - 3rem);
-    margin-left: var(--mb-3);
-    margin-right: var(--mb-3);
-}
-
-.nav {
-    height: var(--header-height);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-logo,
-.nav-toggle {
-    color: var(--white-color);
-}
-
-.nav-logo {
-    font-weight: var(--font-semi-bold);
-}
-
-.nav-toggle {
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-
-.nav-menu {
-    position: relative;
-}
-
-@media  screen and (max-width: 767px) {
-    .nav-menu {
-        position: fixed;
-        background-color: var(--body-color);
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100%;
-        box-shadow: -1px 0 4px hsla(var(--hue-color), 64%, 15%, .15);
-        padding: 3rem;
-        transition: .4s;
-    }
-}
-.nav-list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2.5rem;
-}
-
-.nav-link {
-    color: var(--text-color-light);
-    font-weight: var(--font-semi-bold);
-    text-transform: uppercase;
-}
-
-.nav-link:hover {
-    color: var(--text-color);
-}
-
-.nav-close {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    font-size: 1.5rem;
-    color: var(--text-color);
-    cursor: pointer;
-}
-
-/*  Show menu  */
-.show-menu {
-    right: 0;
-}
-
-/*  Change background header  */
-.scroll-header {
-    background-color: var(--body-color);
-    box-shadow: 0 0 4px hsla(var(--hue-color), 64%, 15%, .15);
-}
-
-.scroll-header .nav-logo,
-.scroll-header .nav-toggle {
-    color: var(--title-color);
-}
-
-/*  Active link  */
-.active-link {
-    position: relative;
-    color: var(--title-color);
-}
-
-.active-link::before {
-    content: "";
-    position: absolute;
-    background-color: var(--title-color);
-    width: 100%;
-    height: 2px;
-    bottom: -.75rem;
-}
-
-/* ================== HOME================== */
-.home-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    object-position: 83%;
-}
-
-.home-container {
-    position: relative;
-    height: calc(100vh - var(--header-height));
-    align-content: center;
-    row-gap: 3rem;
-}
-
-.home-data-subtitle,
-.home-data-title,
-.home-social-link,
-.home-info {
-    color: var(--white-color);
-}
-
-.home-data-subtitle {
-    display: block;
-    font-weight: var(--font-semi-bold);
-    margin-bottom: var(--mb-0-75);
-}
-
-.home-data-title {
-    font-size: var(--biggest-font-size);
-    font-weight: var(--font-medium);
-    margin-bottom: var(--mb-2-5);
-}
-
-.home-social {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1.5rem;
-}
-
-.home-social-link {
-    font-size: 1.2rem;
-    width: max-content;
-}
-
-.home-info {
-    background-color: var(--frist-color);
-    display: flex;
-    padding: 1.5rem 1rem;
-    align-items: center;
-    column-gap: .5rem;
-    position: absolute;
-    right: 0;
-    bottom: 1rem;
-    width: 228px;
-}
-
-.home-info-title {
-    display: block;
-    font-size: var(--small-font-size);
-    font-weight: var(--font-semi-bold);
-    margin-bottom: var(--mb-0-75);
-}
-
-.home-info-button {
-    font-size: var(--smaller-font-size);
-}
-
-.home-info-overlay {
-    overflow: var(--img-hidden);
-}
-
-.home-info-img {
-    width: 145px;
-    transition: var(--img-transition);
-}
-
-.home-info-img:hover {
-    transform: var(--img-scale);
 }
 
 /*  Buttons */
@@ -367,7 +164,9 @@ input {
     background: none;
 }
 
+/* ================== HEADER ================== */
+
+/* ================== HOME================== */
+
+
 /* ================== FOOTER================== */
-.footer-container {
-    row-gap: 5rem;
-}
