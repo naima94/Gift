@@ -103,21 +103,6 @@ video {
     height: auto;
 }
 
-button,
-input {
-    /*border: none;*/
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-}
-
-button {
-    cursor: pointer;
-}
-
-input {
-    outline: none;
-}
-
 .main{
     overflow-x: hidden;
 }
@@ -156,29 +141,16 @@ input {
 .button {
     display: inline-block;
     background-color: var(--frist-color);
-    color: var(--white-color);
-    padding: 1rem 2rem;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
     font-weight: var(--font-semi-bold);
     transition: .3s;
+    cursor: pointer;
 }
 
 .button:hover {
     background-color: var(--frist-color-alt);
-}
-
-.button-flex {
-    display: flex;
-    align-items: center;
-    column-gap: .25rem;
-}
-
-.button-link {
-    background: none;
-    padding: 0;
-}
-
-.button-link:hover {
-    background: none;
 }
 
 /* ================== HEADER ================== */
@@ -301,7 +273,25 @@ input {
     visibility: visible;
     bottom: 1.5rem;
 }
-/* ================== HOME================== */
 
+/* ================== HOME================== */
+.home-container {
+    row-gap: .5rem;
+}
+
+.home-img{
+    width: 280px;
+    justify-self: center;
+}
+
+.home-title {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--mb-2);
+}
+
+.home-description {
+    margin-bottom: var(--mb-3);
+}
 
 /* ================== FOOTER================== */
