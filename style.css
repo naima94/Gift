@@ -345,5 +345,48 @@ video {
     margin-bottom: var(--mb-1);
 }
 
+/* =============== ACCESSORY =============== */
+.accessory-container {
+    grid-template-columns: repeat(2, 1fr);
+ }
 
-/* ================== FOOTER================== */
+ .accessory-content {
+     position: relative;
+     display: grid;
+     padding-bottom: .25rem .75rem .75rem;
+     background-color: var(--container-color);
+     box-shadow: 0 2px 6px rgba(65, 11, 16, .15);
+     border-radius: 1rem;
+ }
+
+.accessory-content:hover {
+    box-shadow: 0 3px 12px rgba(65, 11, 16, .15);
+}
+
+.accessory-img {
+    width: 110px;
+    justify-self: center;
+    margin-bottom: .25rem;
+}
+
+.accessory-title,
+.accessory-category {
+    text-align: center;
+}
+
+.accessory-title {
+    font-size: var(--normal-font-size);
+}
+
+.accessory-category {
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-1);
+    color: var(--text-color-light);
+}
+
+.accessory-preci {
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+/* ================== FOOTER ================== */
