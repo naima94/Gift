@@ -436,3 +436,47 @@ video {
 }
 
 /* ================== FOOTER ================== */
+
+.footer-container {
+    grid-template-columns: repeat(auro-fit, minmax(220px, 1fr));
+}
+
+.footer-logo {
+    color: var(--title-color);
+}
+
+.footer-title {
+    margin-bottom: var(--mb-2);
+}
+
+.footer-logo,
+.footer-title {
+    font-size: var(--h3-font-size);
+}
+
+.footer-link {
+    display: inline-block;
+    margin-bottom: .75rem;
+    color: var(--text-color);
+}
+
+.footer-link:hover {
+    color: var(--frist-color);
+}
+
+.footer-social {
+    font-size: 1.5rem;
+    color: var(--title-color);
+    margin-right: var(--mb-3);
+}
+
+.footer-social:hover {
+    color: var(--frist-color);
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    margin-top: 4rem;
+}
