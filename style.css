@@ -354,7 +354,7 @@ video {
  .accessory-content {
      position: relative;
      display: grid;
-     padding-bottom: .25rem .75rem .75rem;
+     padding: .25rem .75rem .75rem;
      background-color: var(--container-color);
      box-shadow: 0 2px 6px rgba(65, 11, 16, .15);
      border-radius: 1rem;
@@ -479,4 +479,45 @@ video {
     font-size: var(--small-font-size);
     color: var(--text-color-light);
     margin-top: 4rem;
+}
+
+
+/* =============== MEDIA QUERRIES =============== */
+@media screen and (max-width: 359px) {
+    .home-img,
+    .shared-img,
+    .send-img {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .home-container,
+    .share-container,
+    .send-container,
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        padding: 5rem 0 0;
+    }
+
+    .home-img {
+        order: 1;
+    }
+
+    .section-title-center,
+    .share-data,
+    .send-description {
+        text-align: initial;
+    }
+
+    .home-img,
+    .shared-img,
+    .send-img {
+        width: 100%;
+    }
+
+    .share-img {
+        order: -1;
+    }
 }
