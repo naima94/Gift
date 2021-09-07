@@ -389,4 +389,14 @@ video {
     color: var(--title-color);
 }
 
+.accessory-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    font-size: 1.25rem;
+    padding: .5rem .625rem;
+    border-radius: 1rem 0 1rem 0;
+}
+
 /* ================== FOOTER ================== */
