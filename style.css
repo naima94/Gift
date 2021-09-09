@@ -424,7 +424,7 @@ video {
 
 .send-title,
 .send-description {
-    color: var(--body-color);
+    color: #FFF;
 }
 
 .send-description {
